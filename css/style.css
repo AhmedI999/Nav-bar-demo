@@ -1,0 +1,139 @@
+/********** GENERAL **********/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Roboto Slab", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #000;
+    background-color: #f8f9fa;
+}
+.container {
+    padding: 3rem 3rem 2rem 3rem;
+    background-color: #FFFFFFFF;
+    box-shadow: 0 4px 3px rgba(193, 193, 193, 0.2);
+}
+.hidden {
+    display: none;
+}
+.mb-3 {
+    margin-bottom: 3rem;
+}
+/********** NAV HEADER **********/
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    transition: margin-bottom 0.5s ease;
+}
+.logo {
+    font-size: 3rem;
+    font-weight: 550;
+}
+.logo span {
+    color: #b83232;
+}
+.btn-menu {
+    border: none;
+    background-color: #FFFFFFFF;
+    cursor: pointer;
+}
+.fa-bars {
+    font-size: 3.6rem;
+    color: #b83232;
+}
+.fa-x {
+    font-size: 3.6rem;
+    color: #b83232;
+}
+/********* NAV-LINKS & SOCIAL-ICONS *********/
+.nav-links {
+    list-style: none;
+    margin-bottom: 1.6rem;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease;
+
+    display: none;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.nav-links a:link, .nav-links a:visited  {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: #868e96;
+    font-weight: 400;
+}
+.social-icons {
+    list-style: none;
+
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+}
+.social-icons a:link, .social-icons a:visited {
+    font-size: 2.4rem;
+    color: #0202d1;
+}
+.nav-links.show, .social-icons.show {
+    display: flex;
+    max-height: 50rem;
+    opacity: 1;
+    animation: slideIn 1s ease forwards;
+}
+/* LINK & ICONS KEYFRAMES*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 50rem;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        max-height: 50rem;
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+/*NAV MEDIA-QUERY*/
+@media screen and (min-width: 760px){
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
+    }
+    .nav-links {
+        display: flex;
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 1.4rem;
+    }
+    .btn-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
